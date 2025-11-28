@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: proxyrack-service
+    env: docker
+    plan: free
+    region: frankfurt
+    docker:
+      image: proxyrack/pop:latest
+    envVars:
+      - key: UUID
+        value: 12345678-1234-1234-1234-123456789abc
+      - key: API_KEY
+        value: QICQIFCAFIX5VKFF2HM5STEXNJNWBKFPBBK7LXAJ
+      - key: DEVICE_NAME
+        value: render-1
+      - key: BANDWIDTH_LIMIT
+        value: 10M
